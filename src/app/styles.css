@@ -10,15 +10,24 @@
     color: #FFFFFF;
     display: flex;
     justify-content: space-between;
-    padding: 30px;
+    padding: 25px;
 }
 .nav-link{
     color: #FFFFFF;
     text-decoration: none;
 }
+.nav-link:hover{
+    text-decoration: underline;
+}
 .nav-links{
     display: flex;
     gap: 50px;
+}
+
+@media (max-width: 480px) {
+    .nav-links{
+        display: none;
+    }
 }
 
 
@@ -49,6 +58,7 @@
 }
 .banner-text{
     font-size: 50px;
+    line-height: 1.5em;
 }
 .banner-search{
     width: 500px;
@@ -76,5 +86,59 @@
     cursor: pointer;
 }
 button:hover {
-    background-color: #0056b3;
+    background-color: #6940e6;
+}
+
+@media (max-width: 480px) {
+    .banner-text{
+        font-size: 30px;
+    }
+    .banner-search{
+        width: 100%;
+    }
+}
+
+
+
+/* =================== Exercises =============== */
+.exercises-wrapper{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 70px 5px 10px 5px;
+}
+.exercise-text{
+    padding: 10px 0px 20px 0px;
+    font-weight: 600;
+}
+
+/* =================== Exercise Card =============== */
+
+.exercise-card{
+    display: flex;
+    background-color: #F6F6F6;
+    height: 70px;
+    width: 400px;
+    border-radius: 10px;
+    border: 1px solid black;
+    cursor: pointer;
+}
+.exercise-card:hover{
+    background-color: #cccccc;
+}
+.exercise-icon{
+    background-color: #8358FF;
+    border-radius: 10px 0px 0px 10px;
+    color: #FFFFFF;
+    width: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.exercise-card-text{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0px 10px;
 }
