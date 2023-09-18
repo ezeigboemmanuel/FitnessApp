@@ -61,7 +61,7 @@
     line-height: 1.5em;
 }
 .banner-search{
-    width: 500px;
+    width: 450px;
     margin: 0 auto;
     background-color: rgba(255, 255, 255, 0.1); /* Semi-transparent white background */
     border-radius: 25px;
@@ -95,7 +95,7 @@ button:hover {
         font-size: 30px;
     }
     .banner-search{
-        width: 95%;
+        width: 100%;
     }
 }
 
