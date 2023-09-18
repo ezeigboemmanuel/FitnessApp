@@ -1,15 +1,33 @@
-import React from 'react'
-import ExerciseCard from './ExerciseCard'
+"use client";
+import React, { useState, useEffect } from "react";
+import BodyPart from "./BodyPart";
+import { exerciseOptions, fetchData } from "../utility/fetchData";
 
 const Exercises = () => {
-  return (
-    <div className='exercises-wrapper'>
-        <p className='exercise-text'>Different BodyParts, Different Exercises</p>
-        <div>
-            <ExerciseCard />
-        </div>
-    </div>
-  )
-}
+  const [bodyParts, setBodyParts] = useState<Exercises["bodyPart"]>([]);
 
-export default Exercises
+  useEffect(() => {
+    const fetchExercisesData = async () => {
+      const bodyPartsData = await fetchData(
+        "https://exercisedb.p.rapidapi.com/exercises/bodyPartList",
+        exerciseOptions
+      );
+      setBodyParts(["all", ...bodyPartsData]);
+    };
+
+    fetchExercisesData();
+  }, []);
+  console.log("bodyparts", bodyParts);
+  return (
+    <div className="exercises-wrapper">
+      <p className="exercise-text">Different BodyParts, Different Exercises</p>
+      <div className="exercise-bodypart">
+        {bodyParts.map((bodyPart) => (
+          <BodyPart bodyPart={bodyPart} />
+        ))}
+      </div>
+    </div>
+  );
+};
+
+export default Exercises;

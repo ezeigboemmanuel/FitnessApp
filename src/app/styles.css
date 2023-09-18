@@ -84,6 +84,7 @@
     border-radius: 0 25px 25px 0;
     padding: 10px 20px;
     cursor: pointer;
+    text-align: center;
 }
 button:hover {
     background-color: #6940e6;
@@ -106,16 +107,24 @@ button:hover {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 70px 5px 10px 5px;
+    padding: 70px 20px 10px 20px;
+    margin: 10px;
 }
 .exercise-text{
     padding: 10px 0px 20px 0px;
     font-weight: 600;
 }
+.exercise-bodypart{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
 
 /* =================== Exercise Card =============== */
 
-.exercise-card{
+.bodypart-card{
     display: flex;
     background-color: #F6F6F6;
     height: 70px;
@@ -124,10 +133,10 @@ button:hover {
     border: 1px solid black;
     cursor: pointer;
 }
-.exercise-card:hover{
+.bodypart:hover{
     background-color: #cccccc;
 }
-.exercise-icon{
+.bodypart-icon{
     background-color: #8358FF;
     border-radius: 10px 0px 0px 10px;
     color: #FFFFFF;
@@ -136,9 +145,15 @@ button:hover {
     justify-content: center;
     align-items: center;
 }
-.exercise-card-text{
+.bodypart-card-text{
     display: flex;
     justify-content: center;
     align-items: center;
     padding: 0px 10px;
+}
+
+@media (max-width: 480px) {
+    .bodypart-card{
+        width: 100%;
+    }
 }
