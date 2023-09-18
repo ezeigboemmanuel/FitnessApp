@@ -1,8 +1,18 @@
 interface Exercises {
-  bodyPart: String[];
-  equipment: String;
-  gifUrl: String;
-  id: String;
-  name: String;
-  target: String;
+  bodyParts: string[];
+  bodyPart: string;
+  equipment: string;
+  gifUrl: string;
+  id: string;
+  name: string;
+  target: string;
+}
+
+interface ExerciseDetail {
+  bodyPart: string;
+  equipment: string;
+  gifUrl: string;
+  id: string;
+  name: string;
+  target: string;
 }

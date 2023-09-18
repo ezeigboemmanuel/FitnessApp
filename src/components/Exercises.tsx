@@ -4,7 +4,7 @@ import BodyPart from "./BodyPart";
 import { exerciseOptions, fetchData } from "../utility/fetchData";
 
 const Exercises = () => {
-  const [bodyParts, setBodyParts] = useState<Exercises["bodyPart"]>([]);
+  const [bodyParts, setBodyParts] = useState<Exercises["bodyParts"]>([]);
 
   useEffect(() => {
     const fetchExercisesData = async () => {
@@ -17,7 +17,6 @@ const Exercises = () => {
 
     fetchExercisesData();
   }, []);
-  console.log("bodyparts", bodyParts);
   return (
     <div className="exercises-wrapper">
       <p className="exercise-text">Different BodyParts, Different Exercises</p>

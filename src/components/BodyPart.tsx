@@ -6,7 +6,7 @@ type Props = {
 
 const BodyPart = ({bodyPart}: Props) => {
   return (
-    <div className="bodypart-card">
+    <div className="bodypart-card" >
       <div className="bodypart-icon">icon</div>
       <div className='bodypart-card-text'>
         <p>{bodyPart}</p>

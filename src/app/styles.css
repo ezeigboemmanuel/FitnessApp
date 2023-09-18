@@ -107,7 +107,7 @@ button:hover {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 70px 20px 10px 20px;
+    padding: 3% 20px 10px 20px;
     margin: 10px;
 }
 .exercise-text{
@@ -156,4 +156,78 @@ button:hover {
     .bodypart-card{
         width: 100%;
     }
+}
+
+
+/* =================== ExerciseCard ======================= */
+
+.exercise-card{
+    display: flex;
+    flex-direction: column;
+}
+
+
+/* =================== ExerciseDetail ====================== */
+
+.exercise-detail{
+    display: flex;
+    flex-direction: row;
+    padding: 20px;
+    align-items: center;
+    gap: 60px;
+}
+.exercise-detail-img{
+    width: 729px;
+    height: 743px;
+}
+.exercise-detail-text{
+    display: flex;
+    flex-direction: column;
+    gap: 35px;
+}
+.exercise-detail-name{
+    font-size: 64px;
+    font-weight: 700;
+    text-transform: capitalize;
+}
+.exercise-detail-description{
+    color: #4F4C4C;
+    line-height: 1.3em;
+}
+.exercise-detail-span{
+    color: #8358FF;
+    text-transform: capitalize;
+}
+
+@media (max-width: 480px) {
+    .exercise-detail-img{
+        width: 300px;
+        height: 330px;
+    }
+    .exercise-detail{
+        flex-direction: column;
+    }
+    .exercise-detail-text{
+        gap: 20px;
+    }
+    .exercise-detail-name{
+        font-size: 30px;
+    }
+}
+
+
+
+/* =========== SearchedExercises ============== */
+
+.searched-exercises{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+}
+.search-text{
+    text-align: center;
+    font-weight: 600;
+    padding: 10px;
+    font-size: 25px;
 }
