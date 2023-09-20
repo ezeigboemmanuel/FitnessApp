@@ -1,7 +1,7 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
     images: {
-        domains: ["api.exercisedb.io"]
+        domains: ["v2.exercisedb.io"]
     }
 }
 
