@@ -4,7 +4,7 @@ import React from "react";
 const About = () => {
   return (
     <div className="about-container">
-        <h1 className="about-title">About FitLord Exercises</h1>
+      <h1 className="about-title">About FitLord Exercises</h1>
       <p className="about-text">
         Welcome to our FitLord Exercise Website, your online fitness hub! We're
         here to help you move, sweat, and thrive. Get ready to discover
@@ -18,7 +18,9 @@ const About = () => {
         We believe that exercise is not just about achieving physical strength;
         it's about cultivating mental resilience and a deep sense of well-being.
       </p>
-      <p className="about-text">Join us today and let's make every day an active adventure!</p>
+      <p className="about-text">
+        Join us today and let's make every day an active adventure!
+      </p>
       <p className="about-text">
         Visit <Link href="">thecodinglord.com.ng</Link> to learn how to create
         yours!

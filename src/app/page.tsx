@@ -9,20 +9,18 @@ import SearchedExercises from "../components/SearchedExercises";
 export default function Home() {
   const [bodyPart, setBodyPart] = useState("all");
   const [exercises, setExercises] = useState([]);
-  const [show, setShow] = useState(true);
 
   console.log(exercises);
   return (
     <main className="main">
-      <Banner setExercises={setExercises} setShow={setShow} />
-      {show && <Exercises bodyPart={bodyPart} setBodyPart={setBodyPart} />}
+      <Banner setExercises={setExercises} />
+      <Exercises bodyPart={bodyPart} setBodyPart={setBodyPart} />
 
-        <SearchedExercises
-          exercises={exercises}
-          bodyPart={bodyPart}
-          setExercises={setExercises}
-        />
-
+      <SearchedExercises
+        exercises={exercises}
+        bodyPart={bodyPart}
+        setExercises={setExercises}
+      />
     </main>
   );
 }

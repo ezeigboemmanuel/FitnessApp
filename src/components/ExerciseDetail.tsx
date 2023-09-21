@@ -17,14 +17,9 @@ const ExerciseDetail = ({ exerciseDetail }: Props) => {
       />
       <div className="exercise-detail-text">
         <p className="exercise-detail-name">{exerciseDetail.name}</p>
+        <p style={{textDecoration: 'underline'}}>Instruction</p>
         <p className="exercise-detail-description">
-          Experience the revitalizing power of the <span className="exercise-detail-span">{exerciseDetail.name}</span> exercise, a dynamic and
-          effective workout that targets <span className="exercise-detail-span">{exerciseDetail.target}</span> muscle groups for a full-body
-          transformation. Whether you're a beginner or a seasoned fitness
-          enthusiast, this versatile exercise can be tailored to your fitness
-          level, helping you achieve your strength and flexibility goals with
-          each repetition. Incorporate the <span className="exercise-detail-span">{exerciseDetail.name}</span> exercise into your routine for a
-          balanced and invigorating fitness experience.
+          {exerciseDetail.instructions}
         </p>
       </div>
     </div>

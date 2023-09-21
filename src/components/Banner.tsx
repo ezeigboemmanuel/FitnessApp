@@ -7,18 +7,9 @@ import { fetchData, exerciseOptions } from "../utility/fetchData";
 
 type Props = {
   setExercises: (value: any) => void;
-  setShow: (value: boolean) => void;
 };
-const Banner = ({ setExercises, setShow }: Props) => {
+const Banner = ({ setExercises}: Props) => {
   const [search, setSearch] = useState<Exercises["name"]>("");
-  
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    if (search.length <= 1) {
-      setShow(true);
-    }
-    console.log(search.length)
-    setSearch(e.target.value.toLowerCase());
-  };
 
   const handleSearch = async () => {
     if (search) {
@@ -26,6 +17,7 @@ const Banner = ({ setExercises, setShow }: Props) => {
         "https://exercisedb.p.rapidapi.com/exercises",
         exerciseOptions
       );
+      console.log("exerData", exercisesData)
       const searchedExercises = exercisesData.filter(
         (exercise: Exercises) =>
           exercise.name.toLowerCase().includes(search) ||
@@ -33,12 +25,19 @@ const Banner = ({ setExercises, setShow }: Props) => {
           exercise.equipment.toLowerCase().includes(search) ||
           exercise.bodyPart.toLowerCase().includes(search)
       );
+      console.log("searchExer",searchedExercises);
       setSearch("");
-      console.log(searchedExercises);
+      
       setExercises(searchedExercises);
-      setShow(false);
     }
   };
+
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    console.log(search.length)
+    setSearch(e.target.value.toLowerCase());
+    console.log(search)
+  };
+
   return (
     <div className="banner">
       <Image src={bannerImage} alt="banner-img" fill className="banner-img" />
