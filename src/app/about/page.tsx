@@ -22,7 +22,7 @@ const About = () => {
         Join us today and let's make every day an active adventure!
       </p>
       <p className="about-text">
-        Visit <Link href="">thecodinglord.com.ng</Link> to learn how to create
+        Visit <Link href="https://thecodinglord.com.ng/post/how-to-create-a-fitness-app-with-nextjs-and-typescript">thecodinglord.com.ng</Link> to learn how to create
         yours!
       </p>
     </div>
