@@ -9,6 +9,9 @@ const inter = Inter({ subsets: ['latin'] })
 export const metadata: Metadata = {
   title: 'FitLord',
   description: 'Created by Ezeigbo Emmanuel',
+  manifest: '/manifest.json',
+  icons: {apple: '/icon.png'},
+  themeColor: '#ffffff'
 }
 
 export default function RootLayout({
